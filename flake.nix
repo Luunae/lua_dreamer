@@ -19,6 +19,7 @@
             luvit-nix.packages.${system}.luvit
             luvit-nix.packages.${system}.luvi
             pkgs.nodePackages.wrangler
+            pkgs.gh
           ];
         };
       });
