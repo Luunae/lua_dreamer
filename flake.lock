@@ -1,0 +1,95 @@
+{
+  "nodes": {
+    "flake-utils": {
+      "locked": {
+        "lastModified": 1676283394,
+        "narHash": "sha256-XX2f9c3iySLCw54rJ/CZs+ZK6IQy7GXNY4nSOyu2QG4=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "3db36a8b464d0c4532ba1c7dda728f4576d6d073",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "luvit": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1642649424,
+        "narHash": "sha256-TNiD6GPnS8O2d53sJ52xWYqMAXrVJu2lkfXhf2jWuL0=",
+        "owner": "luvit",
+        "repo": "luvit",
+        "rev": "3f328ad928eb214f6438dd25fb9ee8b5c1e9255c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "luvit",
+        "repo": "luvit",
+        "type": "github"
+      }
+    },
+    "luvit-nix": {
+      "inputs": {
+        "flake-utils": "flake-utils",
+        "luvit": "luvit",
+        "nixpkgs": "nixpkgs"
+      },
+      "locked": {
+        "lastModified": 1677191845,
+        "narHash": "sha256-jAyQcaK9SAoP87K3qY50Lbc3VWWbVwSdGs+7raUDJS4=",
+        "owner": "aiverson",
+        "repo": "luvit-nix",
+        "rev": "92d0e7f7108092bd9756f7b57d3bdb939df5727c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "aiverson",
+        "repo": "luvit-nix",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1650501692,
+        "narHash": "sha256-ApKf0/dc0SyB7zZ6yiiOQgcXAhCXxbSDyihHfRDIzx0=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "9887f024766aa27704d1f89f623efd1d063da92a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-21.11",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_2": {
+      "locked": {
+        "lastModified": 1696419054,
+        "narHash": "sha256-EdR+dIKCfqL3voZUDYwcvgRDOektQB9KbhBVcE0/3Mo=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "7131f3c223a2d799568e4b278380cd9dac2b8579",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixpkgs-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "luvit-nix": "luvit-nix",
+        "nixpkgs": "nixpkgs_2"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
