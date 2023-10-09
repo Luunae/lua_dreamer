@@ -3,6 +3,7 @@
 
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
   inputs.luvit-nix.url = "github:aiverson/luvit-nix";
+  inputs.luvit-nix.inputs.nixpkgs.follows = "nixpkgs";
 
   outputs = { self, nixpkgs, luvit-nix }:
     let
@@ -15,11 +16,12 @@
       devShells = forEachSupportedSystem ({ pkgs }:
       let system = pkgs.system; in {
         default = pkgs.mkShell {
+          LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath [ pkgs.sqlite ];
           packages = [
             luvit-nix.packages.${system}.luvit
             luvit-nix.packages.${system}.luvi
-            pkgs.nodePackages.wrangler
-            pkgs.gh
+            luvit-nix.packages.${system}.lit
+            pkgs.sqlite
           ];
         };
       });
